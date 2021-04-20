@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <!--The author of this website is Rebecca Whisnant-->
+    <meta name="author" content="Rebecca Whisnant">
+    <!--The title of this website is called "BlackBook"-->
+ <meta name="description" content="Black Book">
+    <!--This gives the browser instructions on how to control the page's dimensions and scaling-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Specify the character encoding for the HTML document-->
+    <meta charset="utf-8">
+    
+    <!--Icon appears in the Tab of the page-->
+    <link rel="icon" href="ICON.png">
+    <!--Title appears in the Tab of the page-->
+    <title>Login / Sign Up Form for Black Book</title>
+    
+    <!--This link is a shortcut to locate the login page-->
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <!--This link locate the stylesheet for the page-->
+    <link rel="stylesheet" href="main.css">
+    
+    <!--Javascript for an if-else statement function to remind the user to enter their information before trying to continue.-->
+   <script type = "text/javascript" >
+        function fn1()
+        {
+            var str = document.getElementById("username").value;
+            var str1 = document.getElementById("password").value;
+
+if (str == "" ) 
+{
+	
+      alert( "Invalid. Enter your username, please.");
+return false;
+	
+	}
+    else if(str1 == "")
+        {
+          alert( "Invalid. Enter your password, please.");
+return false;  
+        }
+    else
+    {
+          alert("Welcome Back!");
+        window.location.href="BlackBook.html";
+
+    }
+}
+    </script>
+</head>
+
+<!--The 'class' in the 'body' represents the background image of the login page-->
+<body class="black-background">
+    <!--This 'class' contains the login page-->
+    <div class="container">
+        <!--This 'class' forms the login  page-->
+        <form class="form" id="login">
+            <!--Header of the login page-->
+            <h1 class="form__title">Welcome to Black Book</h1>
+            <p style="font-size:12px;text-align: center;">**A Used Car Market Guide System</p>
+            <h1 class="form__title">Login</h1>
+            <!--Forms a error message-->
+            <div class="form__message form__message--error"></div>
+            <!--Forms the username or email input-->
+            <div class="form__input-group">
+                <input type="text" class="form__input" id="username" autofocus placeholder="Username or email"required>
+                <!--Forms error message-->
+                <div class="form__input-error-message"></div>
+            </div>
+            <!--Forms the password input-->
+            <div class="form__input-group">
+                <input type="password" class="form__input" id="password" autofocus placeholder="Password"required>
+                <!--Forms error message-->
+                <div class="form__input-error-message"></div>
+            </div>
+            <!--Onclick redirect user to BlackBook page-->
+            <button href="BlackBook.html" class="form__button" type="submit" ><a class="form__link" type="submit" onclick="fn1();">Continue</a></button>
+            <!--Onclick redirect user to 'Create Account' page-->
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+            </p>
+        </form>
+        <!--Forms the create account input for the user-->
+        <form class="form form--hidden" id="createAccount">
+            <!--Header of the create account page-->
+            <h1 class="form__title">Create Account</h1>
+            <!--Forms error message-->
+            <div class="form__message form__message--error"></div>
+            <!--Forms the username input-->
+            <div class="form__input-group">
+                <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                <div class="form__input-error-message"></div>
+            </div>
+            <!--Forms the email address input-->
+            <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Email Address">
+                <div class="form__input-error-message"></div>
+            </div>
+            <!--Forms the password input-->
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <!--Forms the confirm password input-->
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <!--Onclick redirect user to login page-->
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+            </p>
+        </form>
+    </div>
+   <!--This is a point to an external Javascript file-->
+    <script src="main.js"></script>
+    
+</body>

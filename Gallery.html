@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!--Specify the character encoding for the HTML document-->
+<meta charset="utf-8">
+    <!--This gives the browser instructions on how to control the page's dimensions and scaling-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <!--The author of this website is Rebecca Whisnant-->
+    <meta name="author" content="Rebecca Whisnant">
+        <!--The title of this website is called "Cook With Me"-->
+    <meta name="description" content="Cook With Me Webpage">
+            <!--Icon appears in the Tab of the page-->
+        <link rel="icon" href="images/logo.jpg">
+            <!--This is a link to the social media icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--This link locate the javascript for the page-->
+<script type = "text/javascript" src = "Gallery.js" ></script>
+    <!--Title appears in the Tab of the page-->
+<title>Cook With Me</title>
+    
+<style>
+        /*This styles the entire page*/
+    *{
+        box-sizing: border-box; 
+        margin: 0px;
+        padding: 0px;
+    }
+        /*This styles the sidebar in the menu*/
+    .sidebar
+    {
+        position: fixed;
+        width: 0px;
+        height: 100%;
+        z-index: 1;
+        background: #594848;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        margin-left: 0px;            
+    }
+        
+     .sidebar a
+    {
+        padding: 8px 8px 8px 32px;
+        font-size: 20px;
+        font-family: Arial;
+        background: #594848;
+        color: #000;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    
+    .sidebar li:a
+    {
+        width:170px;
+    }
+    
+    .sidebar li a:hover
+    {
+        background-color: #594848;
+    }
+    
+    .sidebar a:hover
+    {
+        text-decoration: none;
+        background: silver;
+        color: black;
+    }
+             /*This styles the icon for the menu*/      
+    .icon
+    {
+        float: right;
+        margin: 15px 30px;
+        font-size: 50px;
+        color: #fff;
+        cursor: pointer;     
+    }
+        /*This styles the menu*/    
+    .menu
+    {
+        margin: 2px 5px;
+        font-size: 15px;
+        color: #fff;
+        cursor: pointer;     
+    }
+              /*This styles the close button icon for the menu*/
+    .sidebar .closeicon
+    {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font-size: 40px;
+        margin: 4px;
+        text-decoration: none;
+        color: #000;
+    }
+        /*This styles the body of the page*/
+    body
+    {
+        margin: 0;
+        background: gray;
+    }
+       /*This styles the container*/
+    .container
+    {
+        max-width: 1200px;
+        margin: auto;
+        background: #f2f2f2;
+        overflow: auto;
+    }
+        /*This styles the gallery of the images*/
+    .gallery
+    {
+        margin:5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 900px;
+    }
+    .gallery img
+    {
+        width: 100%;
+        height: auto;
+          float: right;
+    }
+    .gallery img
+    {
+        width: 230px;
+        padding: 5px;
+        filter:grayscale(100%);
+        transition: 1s;
+    }
+    
+    .gallery img:hover
+    {
+        filter: grayscale(0);
+        transform: scale(1.1);
+    }
+    /*This styles the description*/
+    .desc
+    { 
+        padding: 15px;
+        text-align: center;
+        font-style: oblique;
+    }
+          /*This styles the footer*/        
+    footer
+    {
+        padding: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: center;
+        color:white;
+        font-family: Arial;
+        letter-spacing: 1px;
+    }
+        /*This styles the social media icons*/
+    .fa 
+    {
+        padding: 20px;
+        font-size: 25px;
+        width: 60px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;   
+    }
+    
+    .fa:hover 
+    {
+        opacity: 0.7;
+    }
+
+    .fa-facebook 
+    {
+        background: #3B5998;
+        color: white;
+    }
+    
+    .fa-twitter 
+    {
+        background: #55ACEE;
+        color: white;
+    }
+    
+    .fa-youtube 
+    {
+        background: #bb0000;
+        color: white;
+    }
+
+    .fa-instagram 
+    {
+        background: #125688;
+        color: white;
+    }
+    
+    .fa-snapchat-ghost 
+    {
+        background: #fffc00;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+</style>
+    </head>
+<body>
+       <!--This displays and controls the sidebar menu-->
+    <div id="sidebar" class="sidebar">
+        <li> 
+            <a href="javascript:void(0)" class="closeicon" id="closeicon" onclick="closnav()">&times;</a>
+        </li>
+                <a href="CookWithMe.html#Home">Home</a>
+                <a href="Recipes.html#Recipes">Recipes</a>   
+                <a href="Gallery.html#Gallery">Gallery</a> 
+    </div>
+                    <!--Displays the menuicon-->
+    <span class="icon" id="menuicon" onclick="opennav()">&#9776;<p class="menu"><b>Menu</b></p></span>
+    
+    <!--This 'class' contains the gallery of images-->
+    <div class ="container">
+        <div class="gallery">
+            <!--Displays image of a fish-->
+            <img src = "images/1.jpg">
+            <!--Displays description of the image-->
+            <div class = "desc"> <b>Fish</b></div>
+        </div>
+        <div class="gallery">
+            <!--Displays image of a cake-->
+            <img src = "images/2.jpg">
+            <div class = "desc"> <b>Cake</b></div>
+        </div>
+        <div class="gallery">
+        <!--Displays image of a sushi-->
+            <img src = "images/3.jpg">
+            <!--Displays description of the image-->
+            <div class = "desc"> <b>Sushi</b></div>
+        </div>
+        <div class="gallery">
+            <!--Displays image of a pasta and salad-->
+            <img src = "images/5.jpg">
+            <!--Displays description of the image-->
+            <div class = "desc"> <b>Pasta Vegetable Salad</b></div>
+        </div>
+        <div class="gallery">
+            <!--Displays image of a pastries-->
+            <img src = "images/6.jpg">
+            <!--Displays description of the image-->
+            <div class = "desc"> <b>Cheese Danish Pastry</b></div>
+        </div>
+        <div class="gallery">
+            <!--Displays image of a brownies-->
+            <img src = "images/7.jpg">
+            <!--Displays description of the image-->
+            <div class = "desc"><b> Brownies</b></div>
+        </div>
+    </div>
+           <!--Displays the footer-->     
+    <footer>
+    Store Hours: Mon-Fri 9-5<br>
+    816-584-6747<br>
+    http://www.CookWithMe.html#Contact<br>
+
+     <i><b>Cook With Me</b></i><br>
+    870 WESTSIDE Drive<br>
+  1541 Lily Ave , 28151<br>
+                            <!--Social Media icons-->
+         <a href="https://www.facebook.com/#Facebook" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/#Twitter" class="fa fa-twitter"></a>
+    <a href="https://www.youtube.com/#YouTube" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/#Instagram" class="fa fa-instagram"></a>
+    <a href="https://www.snapchat.com/#Snapchat" class="fa fa-snapchat-ghost"></a>
+    </footer>
+        <!--Javascript that calls functions to control the sidebar menu-->
+    <script>
+        /*This function opens the sidebar menu*/
+    function opennav()
+        {
+            document.getElementById("sidebar").style.width="175px";
+            document.getElementById("menuicon").style.display="none";
+        }
+        /*This function closes the sidebar menu*/
+        function closnav()
+        {
+            document.getElementById("sidebar").style.width="0";
+            document.getElementById("menuicon").style.display="block";
+        }
+    </script>
+</body>
+    
+</html>

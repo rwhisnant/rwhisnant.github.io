@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Specify the character encoding for the HTML document-->
+<meta charset="utf-8">
+    <!--This gives the browser instructions on how to control the page's dimensions and scaling-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <!--The author of this website is Rebecca Whisnant-->
+    <meta name="author" content="Rebecca Whisnant">
+    <!--The title of this website is called "R.A.D Designs"-->
+    <meta name="description" content="R.A.D Designs Webpage">
+            <!--Title appears in the Tab of the page-->
+	<title>R.A.D Designs</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" >
+                <!--Icon appears in the Tab of the page-->
+	<link rel="icon" href="images/Picture1.png">
+            <!--This is a link to the social media icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!--This is a point to an external Javascript file for the payment method-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--This is a point to an external Javascript file-->
+    <script type = "text/javascript" src = "alert.js" >
+    </script>
+    <script type = "text/javascript" src = "userINFO.js" >
+    </script>
+    <script type = "text/javascript" src = "radio_click2.js" >
+    </script>
+    <!--Javascript for an if-else statement function to remind the user to enter their information before trying to continue.-->
+    <script type = "text/javascript" >
+        function fn1()
+        {
+            var str = document.getElementById("custName").value;
+            var str1 = document.getElementById("custAge").value;
+            var str2 = document.getElementById("custSize").value;
+            var str3 = document.getElementById("custScripture").value;
+            var str4 = document.getElementById("color");
+            var str5 = document.getElementById("cardHolder").value;
+            var str6 = document.getElementById("cardNumber").value;
+            var str7 = document.getElementById("expiryDate").value;
+            var str8 = document.getElementById("cvc").value;
+            var str9 = document.getElementById("email").value;
+
+if (str == "" ) 
+{
+	
+      alert( "Invalid. Enter your name, please.");
+return false;
+	
+	}
+    else if(str1 == "")
+        {
+          alert( "Invalid. Enter your age, please.");
+return false;  
+        }
+    else if(str2 == "")
+        {
+            alert( "Invalid. Enter your size for your shirt, please.");
+return false;
+        }
+    else if(str3 == "")
+    {
+        alert("Invalid. Enter your most desired scripture, please.");
+        return false;
+    }
+    
+            else if(str4 == "")
+    {
+               alert("Invalid. Enter valid information, please.");
+        return false;
+    }
+            else if(str5 == "")
+    {
+                       alert("Invalid. Enter valid information, please.");
+        return false;
+    }
+            else if(str6 == "")
+    {
+                     alert("Invalid. Enter valid information, please.");
+        return false;
+    }
+            else if(str7 == "")
+    {
+                      alert("Invalid. Enter valid information, please.");
+       return false;
+    }
+            else if(str8 == "")
+    {
+                      alert("Invalid. Enter valid information, please.");
+       return false;
+    }
+            else if(str9 == "")
+    {
+                      alert("Invalid. Enter valid information, please.");
+       return false;
+    }
+    else
+    {
+          alert("Your order was successful!\nWe will be sending you a e-receipt with more details about your order.\nThank you for ordering a customized shirt from R.A.D Designs inc.!");
+
+    }
+}
+    </script>
+     
+ <style>
+             /*This styles the entire page*/
+     *{
+        box-sizing: border-box;  
+          margin: 0;
+          padding: 0;
+     }
+     /*Displays the background*/
+	body.black-background
+     {
+         background-image: url(images/Picture1.png); background-size: 75px;
+     }
+     /*This styles the sidebar in the menu*/
+     .sidebar
+    {
+        position: fixed;
+        width: 0px;
+        height: 100%;
+        z-index: 1;
+        background: floralwhite;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        margin-left: 0px;            
+    }
+        
+     .sidebar a
+    {
+        padding: 8px 8px 8px 32px;
+        font-size: 20px;
+        font-family: Arial;
+        background: floralwhite;
+        color: #000;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    
+    .sidebar li:a
+    {
+        width:170px;
+    }
+    
+    .sidebar li a:hover
+    {
+        background-color: floralwhite;
+    }
+    
+    .sidebar a:hover
+    {
+        text-decoration: none;
+        background: silver;
+        color: black;
+    }
+     /*This styles the icon for the menu*/          
+    .icon
+    {
+        float: right;
+        margin: 10px 30px;
+        font-size: 50px;
+        color: #000;
+        cursor: pointer;  
+    }
+     /*This styles the menu*/    
+    .menu
+    {
+        margin: 2px 5px;
+        font-size: 15px;
+        color: #000;
+        cursor: pointer;  
+     }
+    /*This styles the close button icon for the menu*/
+    .sidebar .closeicon
+    {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font-size: 40px;
+        margin: 4px;
+        text-decoration: none;
+        color: #000;
+    }
+     /*This styles the social media icons*/
+     .fa
+    {
+        padding: 20px;
+        font-size: 25px;
+        width: 60px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;  
+    }
+    
+    .fa:hover
+    {
+        opacity: 0.7;
+    }
+
+    .fa-facebook
+    {
+        background: #3B5998;
+        color: white;
+    }
+    
+    .fa-twitter
+    {
+        background: #55ACEE;
+        color: white;
+    }
+    
+    .fa-youtube
+    {
+        background: #bb0000;
+        color: white;
+    }
+
+    .fa-instagram
+    {
+        background: #125688;
+        color: white;
+    }
+    
+    .fa-snapchat-ghost
+    {
+        background: #fffc00;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+     /*This styles the paragraph*/
+     p
+     {
+         background-color: floralwhite; font-size: 1em; margin-left:70px; margin-right: 50px; align-content: center;
+     }
+     /*This styles the third header*/
+     h3
+     {
+         background-color: floralwhite; text-align: center;height: 450px; width: 777px;margin: 400px;
+     }
+     /*This styles the second header*/
+	h2
+     {
+         background-color: floralwhite; font-size: 4em; font-weight: bold; text-align: center; font-style: italic; color: black; box-shadow: 5px 10px black; margin-right: 5px; height: 100px;
+     }
+     /*This styles the fourth header*/
+     	   h4
+     {
+         float: center; margin: 400px; background-color: floralwhite; color:black;  font-size: 1em;  text-align: center;height: 1030px; width: 777x; 
+     }
+    /*This styles the input for the customers name*/
+     input.custName
+     {
+         width: 50%; padding: 8px;
+     }
+    /*This styles the input for the customers aga*/
+    input.custAge
+     {
+        width: 50%; padding: 8px;
+     }
+    /*This styles the input for the customers size*/
+     input.custSize
+     {
+         width: 50%; padding: 8px;
+     }
+    /*This styles the input for the customers scripture*/
+     input.custScripture
+     {
+         width: 50%; padding: 8px;
+     }
+    /*This styles the input color*/
+     input.color
+     {
+         width: 50%; padding: 8px;
+     }
+     /*This styles the input for the email*/
+    input.email
+     {
+         width: 50%; padding: 8px;
+     }
+     /*This styles the background of the payment method*/
+     c 
+     {
+         font-size: 1em; font-weight: bold; text-align: left; color: floralwhite; text-decoration: none;text-align: left;
+     }
+	c:hover 
+     {
+         background-color: silver;
+     }	
+     /*This styles the replica of the order*/
+     figure
+     {
+         float:center; margin: 450px;
+     }
+     /*This styles the fifth header*/
+     h5
+     {
+         color: black; font-weight: bold; box-shadow: 5px 10px floralwhite; text-align: center; background-color: floralwhite;
+     }
+     
+     /*This styles the payment method*/
+     .payment
+     {
+         background: #f8f8f8;
+         max-width: 360px;
+         margin: 80px auto;
+         height: auto;
+         padding: 35px;
+         padding-top: 70px;
+         border-radius: 5px;
+         position: relative; 
+     }
+     .payment h6
+     {
+         text-align: center;
+         letter-spacing: 2px;
+         margin-bottom: 40px;
+         color: #0d3c64;
+     }
+     /*This styles the form label*/
+     .form label
+     {
+         display: block;
+         color: #555555;
+         margin-bottom: 6px;
+     }
+     /*This styles the form input*/
+     .form .input
+     {
+         padding: 13px 0 13px 25px;
+         width: 100%;
+         text-align: center;
+         border: 2px solid #dddddd;
+         border-radius: 5px;
+         letter-spacing: 1px;
+         word-wrap: 3px;
+         outline: none;
+         font-size: 16px;
+         color: ##555555;
+     }
+     /*This styles the card icon*/
+     .card-grp
+     {
+         display: flex;
+         justify-content: space-between;
+     }
+     .card-item
+     {
+         width: 48%;
+     }
+     .space
+     {
+         margin-bottom: 20px;
+     }
+     /*This styles the icons*/
+     .icon-relative
+     {
+         position: relative;
+     }
+     .icon-relative .fas,
+     .icon-relative .far
+     {
+         position: absolute;
+         bottom: 12px;
+         left: 15px;
+         font-size: 20px;
+         color: #555555;
+     }
+     /*This styles the logo icon on the payment method*/
+     .payment-logo
+     {
+         position: absolute;
+         top: -50px;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 100px;
+         height: 100px;
+         background: #f8f8f8;
+         border-radius: 50%;
+         box-shadow: 0 0 5px rgba{0,0,8,0.2};
+         text-align: center;
+         line-height: 100px;
+     }
+     .payment-logo:before
+     {
+         content: "";
+         position: absolute;
+         top:5px;
+         left: 5px;
+         width: 100px;
+         height: 90px;
+         background-image: url(images/Picture1.png);
+         background-size:contain;
+         border-radius: 50%;
+     }
+     .payment-logo p
+     {
+         color: #f8f8f8;
+         position: relative;
+     }
+     /*This styles the icons beside the users input for the card information*/
+     @media screen and (max-width: 420px)
+     {
+         .card-grp
+         {
+            flex-direction: column; 
+         }
+         .card-item
+         {
+           width: 100%; 
+             margin-bottom: 20px;
+         }
+     }
+ </style>
+</head>
+            <!--The 'class' in the 'body' represents the background image of the login page-->
+ <body class="black-background">
+            <!--This displays and controls the sidebar menu-->
+     <div id="sidebar" class="sidebar">
+        <li> 
+            <a href="javascript:void(0)" class="closeicon" id="closeicon" onclick="closnav()">&times;</a>
+        </li>
+                <a href="R.A.D Designs.html#Home">Home</a>
+                <a href="FounderCEO-index.html">Founder CEO</a>   
+                <a href="product.html#Product">Product</a> 
+    </div>
+                     <!--Displays the menuicon-->
+    <span class="icon" id="menuicon" onclick="opennav()">&#9776;<p class="menu"><b>Menu</b></p></span> 
+  <header>
+         <!--Displays the second header-->    
+   <h2>
+        R.A.D Designs inc.	   
+      </h2>
+          <!--Displays the third header-->
+      <h3>          
+          <p><u><b>Price per shirt:<br><br></b></u>
+    <small> $10 <br> <br></small>
+    <u><b>Sizes of the shirts:<br><br></b></u>
+    <small> XS-3XL<br><br></small>
+    <u><b>Product details:<br><br></b></u>
+         <small> Polyester-Cotton Blend Short Sleeve T-Shirt<br>
+             Your choice of scripture, inspirational quote,<br> church name, or mission statement on the shirt. <br> <br>  </small>
+    
+    <u><b>Group Package Deal:<br><br></b></u>
+    <small>$15  <br><br> </small>
+          *No additional charge to include logo of any organization</p> 
+      </h3>
+      <!--This figure displays a replica of what the user can expect their order to turn out-->
+<figure>
+      	<img src="images/productII.png" alt="product" >
+      
+      </figure>
+                <!--Displays the fourth header-->
+<h4>
+            <!--This forms the category page-->
+<form id = "myForm" action = "">
+<!--This paragraph contains the users input to the order form-->
+<p>
+    <big>Order Your Shirt Today:</big>
+    <br><br>
+<label>
+<input class="custName" type = "text" id = "custName" placeholder="Name (last name, first name, middle initial)"required/>
+</label>
+<br /><br />
+<label>
+<input class="custAge" type = "text" id = "custAge" placeholder="Age" required/>
+</label>
+<br /><br />
+<label>
+<input class="custSize" type = "text" id = "custSize" placeholder="Size (S, M, L, XL, 2XL, 3XL)"required/>
+</label>
+<br /><br />
+<label>
+<input class="custScripture" type = "text" id = "custScripture" placeholder="Scripture (Heal me O Lord -Jeremiah 17:14)" required/>
+</label>
+<br /><br />
+<label>
+<input class="color" type = "text" id = "color" placeholder="Color of Shirt (Red, Blue, Green etc.)" required/>
+</label>
+<br /><br />
+<label>
+<input class="email" type = "text" id = "email" placeholder="Email address (rockyroad4@gmail.com)" required/>
+</label>
+<br /><br />
+    </p>
+<!--This 'class' contains the users input to their payment method-->
+    <div class="wrapper">
+        <div class="payment">
+            <div class="payment-logo">
+              
+            </div>
+            <!--This is thr sixth header-->
+            <h6>Payment Method</h6>
+            <!--This forms the category page-->
+            <div class="form">
+                <div class="card space icon-relative">
+                    <label class="label">Card holder:</label>
+                    <input id="cardHolder" type="text" class="input" name="card_holder" placeholder="Name on Card"required>
+                </div>
+                <div class="card space icon-relative">
+                    <label class="label">Card number:</label>
+                    <input id="cardNumber" type="text" class="input" name="card_number" placeholder="Card Number" data-mask="0000 0000 0000 0000"required>
+                    <i class="far fa-credit-card"></i>
+                </div>
+                <div class="card-grp space">
+                    <div class="card-item icon-relative">
+                        <label class="label">Expiry date:</label>
+                        <input id="expiryDate" type="text" class="input" name="expiry_date" placeholder="00 / 00" data-mask="00 / 00"required>
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
+                    <div class="card-item icon-relative">
+                        <label class="label">CVC:</label>
+                        <input id="cvc" type="text" class="input" name="CVC" placeholder="000" data-mask="000"required >
+                        <i class="fas fa-lock"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!--Onclick confirms users order with alert message-->
+<input type = "submit" id = "submit" value = "Submit Order here!" onclick="fn1();" >
+</form>
+    <!--Javascript for a function to filter through the users inputs to make sure no blanks where left in the order form-->
+    <script type="text/javascript">
+    (function()
+     {
+        $('form > input').keyup(function(){
+             var empty = false;
+            $('form > input').each(function(){
+                if($(this).val() == '')
+                {
+                    empty = true;
+                }
+        }); 
+            if(empty){
+                    $('submit').attr ('disabled','disabled');
+                }
+                else{
+                     $('submit').removeAttr ('disabled');
+                }  
+    });
+    })()
+    </script>
+       <!--This is a point to an external Javascript file-->
+    <script type = "text/javascript" src = "radio_click2r.js" >
+    </script>
+     
+      </h4>
+ <!--These are points to an external Javascript file-->       
+<script type = "text/javascript" src = "userINFO2.js"></script>
+  <script type = "text/javascript" src = "alert.js" >
+    </script>
+   <footer>
+
+<h5>
+    <!--Displays the footer-->            
+    R.A.D Designs inc.
+        <br>
+8700 N. W. River Park Drive
+    <br>
+    Barkville, NM 64123
+    <br>
+                   <!--Displays the Social media icons-->     
+    <a href="https://www.facebook.com/#Facebook" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/#Twitter" class="fa fa-twitter"></a>
+    <a href="https://www.youtube.com/#YouTube" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/#Instagram" class="fa fa-instagram"></a>
+    <a href="https://www.snapchat.com/#Snapchat" class="fa fa-snapchat-ghost"></a>
+       </h5>
+                          </footer>     
+      </header>
+     <!--Javascript that calls functions to control the sidebar menu-->
+     <script>
+        /*This function opens the sidebar menu*/
+     function opennav()
+        {
+            document.getElementById("sidebar").style.width="175px";
+            document.getElementById("menuicon").style.display="none";
+        }
+        /*This function closes the sidebar menu*/
+        function closnav()
+        {
+            document.getElementById("sidebar").style.width="0";
+            document.getElementById("menuicon").style.display="block";
+        }
+         
+         
+         
+         
+     </script>
+        <!--This is a point to an external Javascript file for the payment method-->
+         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+     
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <!--Specify the character encoding for the HTML document-->
+<meta charset="utf-8">
+    <!--This gives the browser instructions on how to control the page's dimensions and scaling-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <!--The author of this website is Rebecca Whisnant-->
+    <meta name="author" content="Rebecca Whisnant">
+    <!--The title of this website is called "BlackBook"-->
+ <meta name="description" content="Black Book">
+        <!--Icon appears in the Tab of the page-->
+   <link rel="icon" href="ICON.png">
+        <!--Title appears in the Tab of the page-->
+    <title>Welcome to Black Book</title>
+        <!--This is a link to the social media icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    /*This styles the entire page*/
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+    box-sizing: border-box;
+}
+    /*Blackbook page*/
+/*Form Validation page*/
+/*This styles the body of the table*/
+body > table{
+    width: 80%;
+}
+/*Displays the background*/
+body.black-background
+{
+    background:beige; background-size: 75px;
+}
+.main
+{
+    max-width: 1200px;
+    margin: auto;
+    
+}
+/*This displays the table*/
+table
+{
+    border-collapse: collapse;
+}
+/*This displays the width of the list*/
+table.list
+{
+    width: 100%;
+}
+/*This styles inside the table*/
+td, th
+{
+    border: 1px solid #000;
+    text-align: left;
+    padding: 8px;
+}
+ /*This displays the color of the rows evenly*/          
+tr:nth-child(even),table.list thead>tr
+{
+    background-color: #dddddd;
+}
+/*This styles the input*/
+input[type=text], input[type=number]
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+/*This styles the submit button*/
+input[type=submit]
+{
+    width: 30%;
+    background-color: #ddd;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/*This aligns the text action buttons right*/
+form div.form-action-buttons
+{
+    text-align: right;
+}
+/*This effects the navigation bar*/
+a
+{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0000ee;
+    margin-right: 4px;
+}
+/*Display text in red when theres a error*/
+label.validation-error
+{
+    color: red;
+    margin-left: 5px;
+}
+
+/*Hide the object*/
+.hide
+    {
+        display: none;
+    }
+/*This styles the tabs in the menu*/
+ul
+{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+ul li
+{
+    display: inline-block;
+}
+ul li a
+{
+    text-decoration: none;
+    color: #000;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+    
+}
+
+ul li a:hover
+{
+    background-color: #fff;
+    color: #000;
+}
+/*This styles the footer*/      
+footer
+    {
+        padding: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: center;
+        color:black;
+        font-family: Arial;
+        letter-spacing: 1px;
+    }
+/*This styles the social media icons*/
+.fa
+    {
+        padding: 20px;
+        font-size: 25px;
+        width: 60px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;  
+    }
+    
+    .fa:hover
+    {
+        opacity: 0.7;
+    }
+
+    .fa-facebook
+    {
+        background: #3B5998;
+        color: white;
+    }
+    
+    .fa-twitter
+    {
+        background: #55ACEE;
+        color: white;
+    }
+    
+    .fa-youtube
+    {
+        background: #bb0000;
+        color: white;
+    }
+
+    .fa-instagram
+    {
+        background: #125688;
+        color: white;
+    }
+    
+    .fa-snapchat-ghost
+    {
+        background: #fffc00;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    </style>
+    </head>
+        <!--The 'class' in the 'body' represents the background image of the login page-->
+    <body class="black-background">
+        <header>
+            <!--This 'class' contains the tab menu-->
+            <div class="main">
+           
+            <ul>
+                <li class="active"><a href="login.html">Home</a></li>   
+                <li><a href="About.html">About</a></li>
+                <li><a href="login.html">Log Out</a></li>  
+            </ul>
+            </div>
+        </header>
+            <!--This 'class' contains the blackbook table-->
+          <div class="container">
+            <div class="tab tab-1">
+                <table id="table" border="1">
+                    <tr>
+                        <th>Car Manufacturer:</th>
+                        <th>Car Year:</th>
+                        <th>Car Model:</th>
+                         <th>Car VIN:</th>
+                         <th>Car Body Style:</th>
+                         <th>Car Value:</th>
+                    </tr>
+                    <tr>
+                        <td>ACURA</td>
+                        <td>2020</td>
+                        <td>TL</td>
+                        <td>UA8F2</td>
+                        <td>4D Sedan</td>
+                        <td>$14,850</td>
+                    </tr>
+                    <tr>
+                        <td>ACURA</td>
+                        <td>2020</td>
+                        <td>TL</td>
+                        <td>UA8F3</td>
+                        <td>4D Sedan SP ED</td>
+                        <td>$15,300</td>
+                    </tr>
+                    <tr>
+                        <td>ACURA</td>
+                        <td>2020</td>
+                        <td>TL</td>
+                        <td>UA8F5</td>
+                        <td>4D Sedan w/ Tech PKG</td>
+                        <td>$16,100</td>
+                    </tr>
+                     <tr>
+                        <td>ACURA</td>
+                        <td>2019</td>
+                        <td>TL</td>
+                        <td>UA8F2</td>
+                        <td>4D Sedan</td>
+                        <td>$12,925</td>
+                    </tr>
+                    <tr>
+                        <td>ACURA</td>
+                        <td>2019</td>
+                        <td>TL</td>
+                        <td>UA8F3</td>
+                        <td>4D Sedan SP ED</td>
+                        <td>$13,725</td>
+                    </tr>
+                    <tr>
+                        <td>ACURA</td>
+                        <td>2019</td>
+                        <td>TL</td>
+                        <td>UA8F5</td>
+                        <td>4D Sedan w/ Tech PKG</td>
+                        <td>$14,125</td>
+                    </tr>
+                     <tr>
+                        <td>ACURA</td>
+                        <td>2018</td>
+                        <td>TL</td>
+                        <td>UA8F2</td>
+                        <td>4D Sedan</td>
+                        <td>$11,850</td>
+                    </tr>
+                    <tr>
+                        <td>ACURA</td>
+                        <td>2018</td>
+                        <td>TL</td>
+                        <td>UA8F5</td>
+                        <td>4D Sedan Tech PKG</td>
+                        <td>$12,500</td>
+                    </tr>
+                    <tr>
+                        <td>ACURA</td>
+                        <td>2018</td>
+                        <td>TL</td>
+                        <td>UA8F7</td>
+                        <td>4D Sedan w/ ADV PKG</td>
+                        <td>$13,550</td>
+                    </tr>
+                    <tr>
+                        <td>BMW</td>
+                        <td>2020</td>
+                        <td>X1</td>
+                        <td>VM1C5</td>
+                        <td>4D SUV sDrive 28i</td>
+                        <td>$16,200</td>
+                    </tr>
+                    <tr>
+                        <td>BMW</td>
+                        <td>2020</td>
+                        <td>X1</td>
+                        <td>VL1C5</td>
+                        <td>4D SUV sDrive 28i</td>
+                        <td>$18,200</td>
+                    </tr>
+                    <tr>
+                        <td>BMW</td>
+                        <td>2020</td>
+                        <td>X1</td>
+                        <td>VM5C5</td>
+                        <td>4D SUV sDrive 35i</td>
+                        <td>$20,700</td>
+                    </tr>
+                      <tr>
+                        <td>BMW</td>
+                        <td>2019</td>
+                        <td>X1</td>
+                        <td>VM1C5</td>
+                        <td>4D SUV sDrive 28i</td>
+                        <td>$13,975</td>
+                    </tr>
+                    <tr>
+                        <td>BMW</td>
+                        <td>2019</td>
+                        <td>X1</td>
+                        <td>VL1C5</td>
+                        <td>4D SUV sDrive 28i</td>
+                        <td>$15,375</td>
+                    </tr>
+                    <tr>
+                        <td>BMW</td>
+                        <td>2019</td>
+                        <td>X1</td>
+                        <td>VM5C5</td>
+                        <td>4D SUV sDrive 35i</td>
+                        <td>$18,075</td>
+                    </tr>
+                     <tr>
+                        <td>BMW</td>
+                        <td>2018</td>
+                        <td>X1</td>
+                        <td>VM1C5</td>
+                        <td>4D SUV sDrive 28i</td>
+                        <td>$11,525</td>
+                    </tr>
+                    <tr>
+                        <td>BMW</td>
+                        <td>2018</td>
+                        <td>X1</td>
+                        <td>VL1C5</td>
+                        <td>4D SUV xDrive 28i</td>
+                        <td>$13,175</td>
+                    </tr>
+                    <tr>
+                        <td>BMW</td>
+                        <td>2018</td>
+                        <td>X1</td>
+                        <td>VM5C5</td>
+                        <td>4D SUV xDrive 35i</td>
+                        <td>$15,475</td>
+                    </tr>
+                    <tr>
+                        <td>CHEVROLET</td>
+                        <td>2020</td>
+                        <td>IMPALA</td>
+                        <td>1*5S*</td>
+                        <td>4D Sedan LS</td>
+                        <td>$17,850</td>
+                    </tr>
+                    <tr>
+                        <td>CHEVROLET</td>
+                        <td>2020</td>
+                        <td>IMPALA</td>
+                        <td>105S*</td>
+                        <td>4D Sedan LT</td>
+                        <td>$20,350</td>
+                    </tr>
+                    <tr>
+                        <td>CHEVROLET</td>
+                        <td>2020</td>
+                        <td>IMPALA</td>
+                        <td>125S3</td>
+                        <td>4D Sedan Premier</td>
+                        <td>$24,400</td>
+                    </tr>
+                     <tr>
+                        <td>CHEVROLET</td>
+                        <td>2019</td>
+                        <td>IMPALA</td>
+                        <td>1*5S*</td>
+                        <td>4D Sedan LS</td>
+                        <td>$16,250</td>
+                    </tr>
+                    <tr>
+                        <td>CHEVROLET</td>
+                        <td>2019</td>
+                        <td>IMPALA</td>
+                        <td>105S*</td>
+                        <td>4D Sedan LT</td>
+                        <td>$17,850</td>
+                    </tr>
+                    <tr>
+                        <td>CHEVROLET</td>
+                        <td>2019</td>
+                        <td>IMPALA</td>
+                        <td>145S3</td>
+                        <td>4D Sedan Premier</td>
+                        <td>$21,650</td>
+                    </tr>
+                     <tr>
+                        <td>CHEVROLET</td>
+                        <td>2018</td>
+                        <td>IMPALA</td>
+                        <td>1*5S*</td>
+                        <td>4D Sedan LS</td>
+                        <td>$15,125</td>
+                    </tr>
+                    <tr>
+                        <td>CHEVROLET</td>
+                        <td>2018</td>
+                        <td>IMPALA</td>
+                        <td>105SA</td>
+                        <td>4D Sedan LT</td>
+                        <td>$16,225</td>
+                    </tr>
+                    <tr>
+                        <td>CHEVROLET</td>
+                        <td>2018</td>
+                        <td>IMPALA</td>
+                        <td>115SA</td>
+                        <td>4D Sedan LTZ</td>
+                        <td>$20,175</td>
+                    </tr>
+                </table>
+            </div>
+                  <!--This 'class' contains the users input to the table-->
+            <div class="tab tab-2">
+                <br><br>Car Manufacturer :<input type="text" name="carManufacturer" id="carManufacturer">
+                Car Year :<input type="number" name="carYear" id="carYear">
+                Car Model :<input type="text" name="carModel" id="carModel">
+                Car VIN :<input type="text" name="carVIN" id="carVIN">
+                Car Body Style :<input type="text" name="carBodyStyle" id="carBodyStyle">
+                Car Value :<input type="text" name="carValue" id="carValue">
+                <!--Onclick adds a car to table-->
+                <br><br>
+                <button onclick="addHtmlTableRow();">Add</button>
+                <!--Onclick edits a car to table-->
+                <button onclick="editHtmlTbleSelectedRow();">Edit</button>
+                <!--Onclick removes a car to table-->
+                <button onclick="removeSelectedRow();">Remove</button>
+            </div>
+        </div>
+    <!--This link locate the javascript for the page-->
+    <script src="script.js"></script>
+            
+           <!--Displays the footer-->     
+        <footer>
+        <div>
+     <i><b>Black Book</b></i><br>
+    1147 Clay st<br>
+  Charlotte, NC 28152<br>
+  http://www.BlackBook.html<br>
+  818-221-1818<br>
+</div>
+            <!--Social Media icons-->
+            <a href="https://www.facebook.com/#Facebook" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/#Twitter" class="fa fa-twitter"></a>
+    <a href="https://www.youtube.com/#YouTube" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/#Instagram" class="fa fa-instagram"></a>
+    <a href="https://www.snapchat.com/#Snapchat" class="fa fa-snapchat-ghost"></a>
+        </footer>
+        
+    </body>
+
+    
+</html>

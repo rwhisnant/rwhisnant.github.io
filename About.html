@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <!--Specify the character encoding for the HTML document-->
+<meta charset="utf-8">
+    <!--This gives the browser instructions on how to control the page's dimensions and scaling-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!--The author of this website is Rebecca Whisnant-->
+    <meta name="author" content="Rebecca Whisnant">
+    <!--The title of this website is called "BlackBook"-->
+ <meta name="description" content="Black Book">
+        <!--Icon appears in the Tab of the page-->
+   <link rel="icon" href="ICON.png">
+        <!--Title appears in the Tab of the page-->
+    <title>Welcome to Black Book</title>
+    <!--This is a link to the social media icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<style>
+    /*This styles the entire page*/
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Century Gothic;
+            box-sizing: border-box;
+        }
+    /*About page*/
+        /*Form Validation page*/
+/*This styles the body of the table*/
+body > table
+    {
+        width: 80%;
+    }
+/*Displays the background*/
+body.black-background
+    {
+        background:beige; background-size: 75px;
+    }
+.main
+    {
+        max-width: 1200px;
+        margin: auto;
+    }
+/*This displays the table*/
+table
+    {
+        border-collapse: collapse;
+    }
+/*This displays the width of the list*/
+table.list
+    {
+        width: 100%;
+    }
+/*This styles inside the table*/
+td, th
+    {
+        border: 1px solid #000;
+        text-align: left;
+        padding: 8px;
+    }
+  /*This displays the color of the rows evenly*/      
+tr:nth-child(even),table.list thead>tr
+    {
+        background-color: #dddddd;
+    }
+/*This styles the input*/
+input[type=text], input[type=number]
+    {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+/*This styles the submit button*/
+input[type=submit]
+    {
+        width: 30%;
+        background-color: #ddd;
+        color: #000;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+/*This aligns the text action buttons right*/
+form div.form-action-buttons
+    {
+        text-align: right;
+    }
+/*This effects the navigation bar*/
+a
+    {
+        cursor: pointer;
+        text-decoration: underline;
+        color: #0000ee;
+        margin-right: 4px;
+    }
+/*Display text in red when theres a error*/
+label.validation-error
+    {
+        color: red;
+        margin-left: 5px;
+    }
+/*Hide the object*/
+.hide
+    {
+        display: none;
+    }
+/*This styles the tabs in the menu*/
+ul
+{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+ul li
+{
+    display: inline-block;
+}
+ul li a
+{
+    text-decoration: none;
+    color: #000;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;  
+}
+
+ul li a:hover
+{
+    background-color: #fff;
+    color: #000;
+}
+/*This styles the sidebar in the menu*/
+.sidebar
+{
+        position: fixed;
+        width: 0px;
+        height: 100%;
+        z-index: 1;
+        background: floralwhite;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        margin-left: 0px;            
+}
+        
+.sidebar a
+{
+        padding: 8px 8px 8px 32px;
+        font-size: 20px;
+        font-family: Arial;
+        background: floralwhite;
+        color: #000;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        transition: 0.3s;
+}
+    
+.sidebar li:a
+{
+        width:170px;
+}
+    
+.sidebar li a:hover
+{
+        background-color: floralwhite;
+}
+    
+.sidebar a:hover
+{
+        text-decoration: none;
+        background: silver;
+        color: black;
+}
+/*This styles the icon for the menu*/        
+.icon
+{
+        float: right;
+        margin: 10px 30px;
+        font-size: 50px;
+        color: #000;
+        cursor: pointer;  
+}
+/*This styles the menu*/    
+.menu
+{
+        margin: 2px 5px;
+        font-size: 15px;
+        color: #000;
+        cursor: pointer;  
+}
+/*This styles the close button icon for the menu*/       
+.sidebar .closeicon
+{
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font-size: 40px;
+        margin: 4px;
+        text-decoration: none;
+        color: #000;
+}
+/*This styles the paragraph*/
+p
+{
+    background-color: floralwhite; font-size: 1em;  align-content: center;
+}
+/*This styles the third header*/
+h3
+{
+    background-color: floralwhite; text-align: center;height: 450px; width: 777px;margin: 400px;
+}
+/*This styles the second header*/       
+h2
+{
+    background-color: floralwhite; font-size: 4em; font-weight: bold; text-align: center; font-style: italic; color: black; box-shadow: 5px 10px black; margin-right: 5px; height: 100px;
+}
+/*This styles the footer*/      
+footer
+{
+        padding: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: center;
+        color:black;
+        font-family: Arial;
+        letter-spacing: 1px;
+}
+/*This styles the social media icons*/
+.fa
+{
+        padding: 20px;
+        font-size: 25px;
+        width: 60px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;  
+}
+    
+.fa:hover
+{
+        opacity: 0.7;
+}
+
+.fa-facebook
+{
+        background: #3B5998;
+        color: white;
+}
+    
+.fa-twitter
+{
+        background: #55ACEE;
+        color: white;
+}
+    
+.fa-youtube
+{
+        background: #bb0000;
+        color: white;
+}
+
+.fa-instagram
+{
+        background: #125688;
+        color: white;
+}
+    
+.fa-snapchat-ghost
+{
+        background: #fffc00;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+        
+</style>
+</head>
+    <!--The 'class' in the 'body' represents the background image of the login page-->
+    <body class="black-background">
+        <header>
+            <!--This displays and controls the sidebar menu-->
+             <div id="sidebar" class="sidebar">
+        <li> 
+            <a href="javascript:void(0)" class="closeicon" id="closeicon" onclick="closnav()">&times;</a>
+        </li>
+                <a href="login.html#Home">Home</a>
+                <a href="About.html#About">About</a>   
+                <a href="login.html#Home">Log Out</a> 
+    </div>
+            <!--Displays the menuicon-->
+    <span class="icon" id="menuicon" onclick="opennav()">&#9776;<p class="menu"><b>Menu</b></p></span>
+            <!--Displays the second header-->
+            <h2>
+        Welcome to Black Book	   
+      </h2>
+        </header>
+        <!--Displays the third header-->
+            <h3>
+                <!--Displays the paragraph-->
+            <p>
+        <b> Black Book<br>Used Car Market Guide System </b>
+   
+   <br>
+        <br>
+<small>
+    <b>Black Book Description:</b><br>
+The Black Book provides the user with the vehicle identification number (VIN), the body style and the latest used car value from what the user has selected in the system. The user must know the basic features for the automobile they are searching. The user must have the manufacturer of the car, the year of the car, the model of the car, the first five digits of the vehicle identification number (VIN), and the body style of the car. The system will ask the user to select the manufacturer of the car, the year of car, and the model of the car. Once the user selects something from these basic features for an automobile of their choice, it will display a list of the first five digits of the vehicle identification number (VIN), the body style of the car and a list of values considering which features it falls under.
+The user can locate the manufacturer of the car, the year of the car, the model of the car, and the first five digits of the vehicle identification number (VIN) and the body style of the car on the vehicles left hand side of the dashboard, side door frame which would be a sticker label, the vehicles title records or the vehicle insurance card. The manufacturer of the car is a business engaged in the manufacture of automobiles. The year of the car is motor vehicle manufacturer’s production period. The model of the car is the name used by a manufacturer to market a range of similar cars. The vehicle identification number (VIN) is an identification code for a specific automobile. The body style of the car refers to the shape and model of an automobile make. The system will give several different latest used car values that the user can choose from.<br>
+    <b>Black Book Purpose:</b><br>
+The main reason why I chose this project is to make it more efficient for used car dealers and used car potential owners to have a system that gives them fast results and gets rid of paperback books. Another reason for this project is to have a way for people to get the value of a car and they can tell if the dealer is giving a good deal or marking up the price value of the car. This in fact will help determine most people’s decision making in buying used cars.
+In doing this project I can see that it will advance my skills in Java programming. I will grow skills in inserting data into the code, working with GUI design and correcting errors when they appear. In a way this project will advance my skills not just in Java programming but as a life skill. This system will help me have a better understand of how to spend my money wisely and save money when I research the value of a used car, I am interested in. It makes the information I need more convenient to get too. Or just having a system that helps the user to be more informed about what they will be investing their money in.
+I will learn the hard work and persistence of being a Software Developer. I will develop more skills in problem solving in my program system. As I work on this project, I will learn all the information that goes into a used car market guide.
+</small>
+   
+                    </p>
+        </h3>
+   <!--Displays the footer-->     
+        <footer>
+        <div>
+     <i><b>Black Book</b></i><br>
+    1147 Clay st<br>
+  Charlotte, NC 28152<br>
+  http://www.BlackBook.html<br>
+  818-221-1818<br>
+</div>
+            <!--Social Media icons-->
+            <a href="https://www.facebook.com/#Facebook" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/#Twitter" class="fa fa-twitter"></a>
+    <a href="https://www.youtube.com/#YouTube" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/#Instagram" class="fa fa-instagram"></a>
+    <a href="https://www.snapchat.com/#Snapchat" class="fa fa-snapchat-ghost"></a>
+        </footer>
+        <!--Javascript that calls functions to control the sidebar menu-->
+        <script>
+            /*This function opens the sidebar menu*/
+     function opennav()
+        {
+            document.getElementById("sidebar").style.width="175px";
+            document.getElementById("menuicon").style.display="none";
+        }
+                        /*This function closes the sidebar menu*/
+        function closnav()
+        {
+            document.getElementById("sidebar").style.width="0";
+            document.getElementById("menuicon").style.display="block";
+        }
+     </script>
+    </body>
+</html>

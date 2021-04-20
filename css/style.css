@@ -1,0 +1,204 @@
+/*CookWithMe page*/
+/*This styles the entire page*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+}
+/*This styles the header*/
+header
+{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/1.jpg);
+    height: 100vh;
+    background-size: contain;
+    background-position: center;
+}
+/*This styles the tabs in the menu*/
+ul
+{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+ul li
+{
+    display: inline-block;
+}
+
+ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+
+ul li a:hover
+{
+    background-color: #fff;
+    color: #000;
+}
+/*This styles the logo icon*/
+.logo img
+{
+    float: left;
+    width: 100px;
+    height: auto;
+}
+/*This styles the footer*/      
+footer
+{
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    color:white;
+    font-family: Arial;
+    letter-spacing: 1px;   
+}
+
+.main
+{
+    max-width: 1200px;
+    margin: auto;
+    margin-left: 120px; 
+}
+/*This styles the title of the page*/
+.title
+{
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.title h1
+{
+    color: #fff;
+    font-size: 70px; 
+}
+/*This styles the button*/
+.button
+{
+    position: absolute;
+    top:62%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/*This styles the button*/
+.btn
+{
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+
+.btn:hover
+{
+    background-color: #fff;
+    color: #000;
+}
+
+
+/*Gallery page*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+}
+/*This styles the body of the page*/ 
+body
+{
+    margin: 0;
+    background: gray;
+}
+/*This styles the tabs in the menu*/
+ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li
+{
+    float: left;
+}
+/*This styles the navigation*/
+nav
+{
+    background: #594848;
+    width: 100%;
+    overflow: auto;
+}
+nav a
+{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+
+nav a:hover
+{
+    background-color: #fff;
+    color: #000;
+}
+/*This styles the container*/
+.container
+{
+    max-width: 1200px;
+    margin: auto;
+    background: #f2f2f2;
+    overflow: auto;
+}
+/*This styles the gallery of images*/
+.gallery
+{
+    margin:5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 390px;
+}
+    
+.gallery img
+{
+    width: 100%;
+    height: auto;
+}
+img
+{
+    width:100%;
+    border-radius: 5px;
+
+}
+
+img:hover
+{
+    transform: scale(2,2);
+    transition: .3s transform;
+    border-radius: 5px; 
+}
+/*This styles the description*/
+.desc
+{
+    padding: 15px;
+    text-align: center;
+}
+/*This styles the footer*/        
+footer
+{
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    color:white;
+    font-family: Arial;
+    letter-spacing: 1px;   
+}
+

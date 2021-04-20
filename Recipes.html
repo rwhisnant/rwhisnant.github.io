@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!--Specify the character encoding for the HTML document-->
+<meta charset="utf-8">
+    <!--This gives the browser instructions on how to control the page's dimensions and scaling-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--The author of this website is Rebecca Whisnant-->
+    <meta name="author" content="Rebecca Whisnant">
+    <!--The title of this website is called "Cook With Me"-->
+    <meta name="description" content="Cook With Me Webpage">
+        <!--Icon appears in the Tab of the page-->
+        <link rel="icon" href="images/logo.jpg">
+        <!--This is a link to the social media icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--This link locate the javascript for the page-->
+<script type = "text/javascript" src = "Gallery.js" ></script>
+<!--Title appears in the Tab of the page-->
+<title>Cook With Me</title>
+<style>
+    /*This styles the entire page*/
+    *{
+        box-sizing: border-box; 
+        margin: 0px;
+        padding: 0px;
+    }
+    /*This styles the sidebar in the menu*/
+    .sidebar
+    {
+        position: fixed;
+        width: 0px;
+        height: 100%;
+        z-index: 1;
+        background: #594848;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        margin-left: 0px;            
+    }
+        
+     .sidebar a
+    {
+        padding: 8px 8px 8px 32px;
+        font-size: 20px;
+        font-family: Arial;
+        background: #594848;
+        color: #000;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    
+    .sidebar li:a
+    {
+        width:170px;
+    }
+    
+    .sidebar li a:hover
+    {
+        background-color: #594848;
+    }
+    
+    .sidebar a:hover
+    {
+        text-decoration: none;
+        background: silver;
+        color: black;
+    }
+       /*This styles the icon for the menu*/         
+    .icon
+    {
+        float: right;
+        margin: 15px 30px;
+        font-size: 50px;
+        color: #fff;
+        cursor: pointer;  
+    }
+    /*This styles the menu*/    
+    .menu
+    {
+        margin: 2px 5px;
+        font-size: 15px;
+        color: #fff;
+        cursor: pointer;  
+    }
+      /*This styles the close button icon for the menu*/
+    .sidebar .closeicon
+    {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font-size: 40px;
+        margin: 4px;
+        text-decoration: none;
+        color: #000;
+    }
+    /*This styles the body of the page*/
+    body
+    {
+        margin: 0;
+        background: gray;
+    }
+    /*This styles the container*/
+    .container
+    {
+        max-width: 1200px;
+        margin: auto;
+        background: #f2f2f2;
+        overflow: auto;
+    }
+    /*This styles the gallery of the images*/
+    .gallery
+    {
+        margin:5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 900px;
+    }
+    
+    .gallery img
+    {
+        width: 100%;
+        height: auto;
+        float: right;
+    }
+    
+    .gallery img
+    {
+        width: 230px;
+        padding: 5px;
+        filter:grayscale(100%);
+        transition: 1s;
+    }
+    
+    .gallery img:hover
+    {
+        filter: grayscale(0);
+        transform: scale(1.1);
+    }
+    /*This styles the description*/
+    .desc
+    {
+        padding: 15px;
+        text-align: center;
+    }
+    /*This styles the first button*/
+    button1
+    {      
+        padding: 10px 20px;
+        font-size: 20px;
+        font-family: Arial;
+        background: #594848;
+        color: #000;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        cursor:pointer;
+        border: 3px solid green;
+    }
+    /*This styles the second button*/
+    button2
+    {     
+        padding: 10px 20px;
+        font-size: 20px;
+        font-family: Arial;
+        background: #594848;
+        color: #000;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        cursor:pointer;
+        border: 3px solid green;
+    }
+    /*This styles the third button*/
+    button3
+    {     
+        padding: 10px 20px;
+        font-size: 20px;
+        font-family: Arial;
+        background: #594848;
+        color: #000;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        cursor:pointer;
+        border: 3px solid green;
+    }
+        /*This styles the fifth button*/
+    button5
+    {    
+        padding: 10px 20px;
+        font-size: 20px;
+        font-family: Arial;
+        background: #594848;
+        color: #000;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        cursor:pointer;
+        border: 3px solid green;
+    }
+    /*This styles the sixth button*/
+    button6
+    {     
+        padding: 10px 20px;
+        font-size: 20px;
+        font-family: Arial;
+        background: #594848;
+        color: #000;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        cursor:pointer;
+        border: 3px solid green;
+    }
+    /*This styles the seventh button*/
+    button7
+    {  
+        padding: 10px 20px;
+        font-size: 20px;
+        font-family: Arial;
+        background: #594848;
+        color: #000;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        cursor:pointer;
+        border: 3px solid green;
+    }
+    /*This centers buttons*/
+    .center
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    /*This displays no bullets*/
+    ul.no-bullets 
+    {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    /*This styles the footer*/      
+    footer
+    {
+        padding: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: center;
+        color:white;
+        font-family: Arial;
+        letter-spacing: 1px; 
+    }
+    /*This styles the social media icons*/
+    .fa 
+    {
+        padding: 20px;
+        font-size: 25px;
+        width: 60px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+    }
+    
+    .fa:hover 
+    {
+        opacity: 0.7;
+    }
+
+    .fa-facebook 
+    {
+        background: #3B5998;
+        color: white;
+    }
+    
+    .fa-twitter 
+    {
+        background: #55ACEE;
+        color: white;
+    }
+    
+    .fa-youtube 
+    {
+        background: #bb0000;
+        color: white;
+    }
+
+    .fa-instagram 
+    {
+        background: #125688;
+        color: white;
+    }
+    
+    .fa-snapchat-ghost 
+    {
+        background: #fffc00;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }   
+</style>
+    </head>
+<body>
+    <!--This displays and controls the sidebar menu-->
+    <div id="sidebar" class="sidebar">
+        <li> 
+            <a href="javascript:void(0)" class="closeicon" id="closeicon" onclick="closnav()">&times;</a>
+        </li>
+                <a href="CookWithMe.html#Home">Home</a>
+                <a href="Recipes.html#Recipes">Recipes</a>   
+                <a href="Gallery.html#Gallery">Gallery</a> 
+    </div>
+                <!--Displays the menuicon-->
+    <span class="icon" id="menuicon" onclick="opennav()">&#9776;<p class="menu"><b>Menu</b></p></span>
+    <!--This 'class' contains the gallery of images-->
+<div class ="container">
+        <div class="gallery">
+            <img src = "images/1.jpg">
+            <div class="center">
+                <!--Onclick shows user recipe of fish-->
+                <button1 id="btn1" > Click Me for Fish Recipe!</button1>
+            </div>
+            <!--Shows user recipe without bullet points-->
+            <ul id="recipe1" class="no-bullets">
+                <li>
+                 Ingredients:<br>
+    1-1/4 pounds fish fillets<br>
+    1 teaspoon seasoned salt<br>
+    Pepper to taste<br>
+    Paprika, optional<br>
+    3 tablespoons butter, melted<br><br>
+                </li>
+                <li>
+                    Directions:<br>
+                Preheat oven to 400°. Place fish in a greased 11x7-in. baking dish. Sprinkle with seasoned salt, pepper and paprika if desired. Drizzle with butter.
+                </li>
+                <li>
+                    Cover and bake until fish just begins to flake easily with a fork, 15-20 minutes.<br><br>
+                </li>
+            </ul>
+        </div>
+        <div class="gallery">
+            <img src = "images/2.jpg">
+            <div class="center">
+                <!--Onclick shows user recipe of cake-->
+                <button2 id="btn2" > Click Me for Cake Recipe!</button2>
+            </div>
+            <!--Shows user recipe without bullet points-->
+            <ul id="recipe2" class="no-bullets">
+                 <li>
+                  Ingredients:<br>
+    1/2 cup shortening<br>
+    1-1/2 cups sugar<br>
+    2 eggs<br>
+    1 bottle (1 ounce) red food coloring<br>
+    3 teaspoons white vinegar<br>
+    1 teaspoon butter flavoring<br>
+    1 teaspoon vanilla extract<br>
+    2-1/2 cups cake flour<br>
+    1/4 cup baking cocoa<br>
+    1 teaspoon baking soda<br>
+    1 teaspoon salt<br>
+    1 cup buttermilk<br>
+    FROSTING:<br>
+    12 ounces cream cheese, softened<br>
+    3/4 cup butter, softened<br>
+    5-2/3 cups confectioners' sugar<br>
+    4-1/2 teaspoons vanilla extract<br><br> 
+                </li>
+                <li>
+                    Directions:<br>
+                Preheat oven to 350°. In a large bowl, cream shortening and sugar until light fluffy. Add eggs, one at a time, beating well after each addition. Beat in the food coloring, vinegar, butter flavoring and vanilla. Combine the flour, cocoa, baking soda and salt; add to creamed mixture alternately with buttermilk, beating well after each addition. 
+                </li>
+                <li>
+                    Pour into three greased and floured 9-in. round baking pans. Bake for 20-25 minutes or until a toothpick inserted in the center comes out clean. Cool for 10 minutes before removing from pans to wire racks to cool completely.
+                </li>
+                <li>
+                    In a large bowl, combine frosting ingredients; beat until smooth and creamy. Spread between layers and over top and sides of cake.<br><br>
+                </li>
+            </ul>
+        </div>
+        <div class="gallery">
+            <img src = "images/3.jpg">
+            <div class="center">
+                <!--Onclick shows user recipe of sushi-->
+                <button3 id="btn3" > Click Me for Sushi Recipe!</button3>
+            </div>
+            <!--Shows user recipe without bullet points-->
+            <ul id="recipe3" class="no-bullets">
+                <li>
+                    Ingredients:<br>
+    2 cups sushi rice, rinsed and drained<br>
+    2 cups water<br>
+    1/4 cup rice vinegar<br>
+    2 tablespoons sugar<br>
+    1/2 teaspoon salt<br>
+    2 tablespoons sesame seeds, toasted<br>
+    2 tablespoons black sesame seeds<br>
+    Bamboo sushi mat<br>
+    8 nori sheets<br>
+    1 small cucumber, seeded and julienned<br>
+    3 ounces imitation crabmeat, julienned<br>
+    1 medium ripe avocado, peeled and julienned<br>
+    Reduced-sodium soy sauce, prepared wasabi and pickled ginger slices, optional<br><br>
+                </li>
+                <li>
+                    Directions:<br>
+                In a large saucepan, combine rice and water; let stand for 30 minutes. Bring to a boil. Reduce heat to low; cover and simmer for 15-20 minutes or until water is absorbed and rice is tender. Remove from the heat. Let stand, covered, for 10 minutes.
+                </li>
+                <li>
+                    Meanwhile, in small bowl, combine the vinegar, sugar and salt, stirring until sugar is dissolved.
+                </li>
+                 <li>
+                    Transfer rice to a large shallow bowl; drizzle with vinegar mixture. With a wooden paddle or spoon, stir rice with a slicing motion to cool slightly. Cover with a damp cloth to keep moist. (Rice mixture may be made up to 2 hours ahead and stored at room temperature, covered with a damp towel. Do not refrigerate.)
+                </li>
+                 <li>
+                    Sprinkle toasted and black sesame seeds onto a plate; set aside. Place sushi mat on a work surface so mat rolls away from you; line with plastic wrap. Place 3/4 cup rice on plastic. With moistened fingers, press rice into an 8-in. square. Top with one nori sheet.
+                </li>
+                 <li>
+                    Arrange a small amount of cucumber, crab and avocado about 1-1/2 in. from bottom edge of nori sheet. Roll up rice mixture over filling, using the bamboo mat to lift and compress the mixture while rolling; remove plastic wrap as you roll.
+                </li>
+                 <li>
+                   Remove mat; roll sushi rolls in sesame seeds. Cover with plastic wrap. Repeat with remaining ingredients to make eight rolls. Cut each into eight pieces. Serve with soy sauce, wasabi and ginger slices if desired.<br><br>
+                </li>
+            </ul>
+        </div>
+        <div class="gallery">
+            <img src = "images/5.jpg">
+            <div class="center">
+                <!--Onclick shows user recipe of pasta and salad-->
+                <button5 id="btn5" > Click Me for Pasta Vegetable Salad Recipe!</button5>
+            </div>
+            <!--Shows user recipe without bullet points-->
+            <ul id="recipe5" class="no-bullets">
+                <li>
+               Ingredients:<br>
+    1-1/2 cups uncooked tricolor spiral pasta<br>
+    1/2 cup fresh broccoli florets<br>
+    1/2 cup cauliflowerets<br>
+    1/2 cup chopped cucumber<br>
+    1/2 cup chopped celery<br>
+    1/3 cup sliced carrot<br>
+    1/4 cup chopped tomato<br>
+    1/4 to 1/3 cup ranch salad dressing<br><br>
+                </li>
+                <li>
+                    Directions:<br>
+                    Cook pasta according to package directions; drain and rinse with cold water. Place in a large bowl; add vegetables. Drizzle with salad dressing; toss to coat. Cover and refrigerate for 1-2 hours.<br><br>
+                </li>
+            </ul>
+        </div>
+        <div class="gallery">
+            <img src = "images/6.jpg">
+            <div class="center">
+                <!--Onclick shows user recipe of pastries-->
+                <button6 id="btn6" > Click Me for Cheese Danish Pastry Recipe!</button6></div>
+                <!--Shows user recipe without bullet points-->
+            <ul id="recipe6" class="no-bullets">
+                <li>
+                Ingredients:<br>
+    2 packages (1/4 ounce each) active dry yeast<br>
+    1/2 cup warm water (110° to 115°)<br>
+    4 cups all-purpose flour<br>
+    1/3 cup sugar<br>
+    2 teaspoons salt<br>
+    1 cup cold butter, cubed<br>
+    1 cup 2% milk<br>
+    4 large egg yolks, room temperature<br>
+    ASSEMBLY:
+    3 teaspoons ground cinnamon, divided<br>
+    12 ounces cream cheese, softened<br>
+    1/3 cup sugar<br>
+    1 large egg, separated, room temperature<br>
+    1 tablespoon water<br>
+    2 tablespoons maple syrup<br><br>
+                </li>
+                <li>
+                    Directions:<br>
+                    Dissolve yeast in warm water. In another bowl, mix flour, sugar and salt; cut in butter until crumbly. Add milk, egg yolks and yeast mixture; stir to form a soft dough (dough will be sticky). Cover and refrigerate 8-24 hours.<br>
+                </li>
+                <li>
+                    To assemble, punch down dough; divide into 4 portions. On a lightly floured surface, pat each portion into a 9x4-in. rectangle; sprinkle each with 3/4 teaspoon cinnamon. Cut each rectangle lengthwise into four 9x1-in. strips. Twist each strip, then loosely wrap strip around itself to form a coil; tuck end under and pinch to seal. Place 3 in. apart on greased baking sheets.<br>
+                </li>
+                <li>
+                    Beat cream cheese, sugar and egg yolk until smooth. Press an indentation in center of each roll; fill with 1 rounded tablespoon cream cheese mixture. Cover; let rise in a warm place until doubled, about 45 minutes. Preheat oven to 350°.<br>
+                </li>
+                <li>
+                    Whisk egg white with water; brush over rolls. Bake until golden brown, 15-20 minutes. Remove to wire racks; brush with syrup. Serve warm. Refrigerate leftovers.<br><br>
+                </li>
+            </ul>
+        </div>
+        <div class="gallery">
+            <img src = "images/7.jpg">
+            <div class="center">
+                <!--Onclick shows user recipe of brownies-->
+                <button7 id="btn7" > Click Me for Brownies Recipe!</button7>
+            </div>
+            <!--Shows user recipe without bullet points-->
+            <ul id="recipe7" class="no-bullets">
+                <li>
+                Ingredients:<br>
+    1 cup sugar<br>
+    1/2 cup packed brown sugar<br>
+    2/3 cup butter, cubed<br>
+    1/4 cup water<br>
+    2 teaspoons instant coffee granules, optional<br>
+    2-3/4 cups bittersweet chocolate chips, divided<br>
+    4 large eggs, room temperature<br>
+    2 teaspoons vanilla extract<br>
+    1-1/2 cups all-purpose flour<br>
+    1/2 teaspoon baking soda<br>
+    1/2 teaspoon salt<br><br>
+                </li>
+                <li>
+                    Directions:<br>
+                    Preheat oven to 325°. Line a 9-in. square baking pan with parchment, letting ends extend up sides. In a large heavy saucepan, combine sugars, butter, water and, if desired, coffee granules; bring to a boil, stirring constantly. Remove from heat; add 1-3/4 cups chocolate chips and stir until melted. Cool slightly.<br>
+                </li>
+                <li>
+                    In a large bowl, whisk eggs until foamy, about 3 minutes. Add vanilla; gradually whisk in chocolate mixture. In another bowl, whisk flour, baking soda and salt; stir into chocolate mixture. Fold in remaining chocolate chips.<br>
+                </li>
+                <li>
+                    Pour into prepared pan. Bake on a lower oven rack 40-50 minutes or until a toothpick inserted in center comes out with moist crumbs (do not overbake). Cool completely in pan on a wire rack.<br>
+                </li>
+                <li>
+                    Lifting with parchment, remove brownies from pan. Cut into squares.<br><br>
+                </li>
+            </ul>
+        </div>
+</div>
+       <!--Displays the footer-->     
+    <footer>
+    Store Hours: Mon-Fri 9-5<br>
+    816-584-6747<br>
+    http://www.CookWithMe.html#Contact<br>
+
+     <i><b>Cook With Me</b></i><br>
+    870 WESTSIDE Drive<br>
+  1541 Lily Ave , 28151<br>
+                    <!--Social Media icons-->
+     <a href="https://www.facebook.com/#Facebook" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/#Twitter" class="fa fa-twitter"></a>
+    <a href="https://www.youtube.com/#YouTube" class="fa fa-youtube"></a>
+    <a href="https://www.instagram.com/#Instagram" class="fa fa-instagram"></a>
+    <a href="https://www.snapchat.com/#Snapchat" class="fa fa-snapchat-ghost"></a>
+    </footer>
+    <!--Javascript that calls functions to control the sidebar menu-->
+<script>
+                    /*This function opens the sidebar menu*/
+        function opennav()
+        {
+            document.getElementById("sidebar").style.width="175px";
+            document.getElementById("menuicon").style.display="none";
+        }
+                /*This function closes the sidebar menu*/
+        function closnav()
+        {
+            document.getElementById("sidebar").style.width="0";
+            document.getElementById("menuicon").style.display="block";
+        }
+        /*This calls the individual buttons onclick*/
+        const button1 = document.getElementById("btn1");
+        const button2 = document.getElementById("btn2");
+        const button3 = document.getElementById("btn3");
+        const button5 = document.getElementById("btn5");
+        const button6 = document.getElementById("btn6");
+        const button7 = document.getElementById("btn7");
+    
+        const recipe1 = document.getElementById("recipe1");
+        const recipe2 = document.getElementById("recipe2");
+        const recipe3= document.getElementById("recipe3");
+        const recipe5 = document.getElementById("recipe5");
+        const recipe6 = document.getElementById("recipe6");
+        const recipe7 = document.getElementById("recipe7");
+        
+        recipe1.style.display="none";
+        button1.addEventListener("click",(event) =>
+        {
+            if(recipe1.style.display == "none")
+            {
+               recipe1.style.display = "block";
+            }
+            else
+            {
+             recipe1.style.display = "none";
+            }
+        })
+        recipe2.style.display="none";
+        button2.addEventListener("click",(event) =>
+        {
+            if(recipe2.style.display == "none"){
+                recipe2.style.display = "block";
+            }else{
+                 recipe2.style.display = "none";
+            }
+        })
+        recipe3.style.display="none";
+        button3.addEventListener("click",(event) =>
+        {
+            if(recipe3.style.display == "none")
+            {
+                recipe3.style.display = "block";
+            }
+            else
+            {
+                 recipe3.style.display = "none";
+            }
+        })
+        recipe5.style.display="none";
+        button5.addEventListener("click",(event) =>
+        {
+            if(recipe5.style.display == "none")
+            {
+                recipe5.style.display = "block";
+            }
+            else
+            {
+                 recipe5.style.display = "none";
+            }
+        })
+        recipe6.style.display="none";
+        button6.addEventListener("click",(event) =>
+        {
+            if(recipe6.style.display == "none")
+            {
+                recipe6.style.display = "block";
+            }
+            else
+            {
+                 recipe6.style.display = "none";
+            }
+        })
+        recipe7.style.display="none";
+        button7.addEventListener("click",(event) =>
+        {
+            if(recipe7.style.display == "none")
+            {
+                recipe7.style.display = "block";
+            }
+            else
+            {
+                 recipe7.style.display = "none";
+            }
+        })
+    </script>
+</body>
+</html>
